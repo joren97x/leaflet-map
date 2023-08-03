@@ -4,9 +4,9 @@
     import L from 'leaflet'
     import 'leaflet/dist/leaflet.css'
     
-    const lat = ref('')
-    const lon = ref('')
-    const dataLoaded = ref(false)
+    // const lat = ref('')
+    // const lon = ref('')
+    // const dataLoaded = ref(false)
     const mapContainer = ref(null)
 
     const address = [
@@ -35,16 +35,18 @@
 
     onMounted(async() => {
 
-        navigator.geolocation.getCurrentPosition(pos => {
-            console.log(pos)
-            lat.value = pos.coords.latitude
-            lon.value = pos.coords.longitude
-            dataLoaded.value = true
-        })
+        // navigator.geolocation.getCurrentPosition(pos => {
+        //     console.log(pos)
+        //     lat.value = pos.coords.latitude
+        //     lon.value = pos.coords.longitude
+        //     dataLoaded.value = true
+        // })
 
-        watch(dataLoaded, () => {
-            generateMap()
-        })
+        // watch(dataLoaded, () => {
+        //     generateMap()
+        // })
+
+        generateMap()
 
     })
 
