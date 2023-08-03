@@ -56,7 +56,7 @@
         // map.on('click', onMapClick)
 
         address.forEach(place => {
-            const marker = L.marker([place.coord[0], place.coord[1]], {icon: greenIcon}).addTo(map)
+            const marker = L.marker([place.coord[0], place.coord[1]], {icon: markerIcon}).addTo(map)
             marker.bindPopup(`<b> Hello from ${place.houseName}! </b> <br> I'm a popup!`)
             map.on('click', onMapClick)
         });
@@ -67,15 +67,9 @@
         alert("You clicked the map at " + e.latlng)
     }
 
-    var greenIcon = L.icon({
-        iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png',
-        shadowUrl: 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',
-
-        iconSize:     [38, 95], // size of the icon
-        shadowSize:   [50, 64], // size of the shadow
-        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-        shadowAnchor: [4, 62],  // the same for the shadow
-        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    var markerIcon = L.icon({
+        iconUrl: 'https://img.icons8.com/color/96/marker--v1.png',
+        iconSize:     [30, 30], // size of the icon
     });
 
 </script>
