@@ -49,7 +49,7 @@
     })
 
     function generateMap() {
-        const map = L.map(mapContainer.value).setView([lat.value, lon.value], 13)
+        const map = L.map(mapContainer.value).setView([10.252763, 123.949394], 13)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
         // const marker = L.marker([10.250984, 123.939499], {icon: greenIcon}).addTo(map)
         // marker.bindPopup("<b> Hello Giatay! </b> <br> I'm a popup!")
